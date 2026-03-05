@@ -1,0 +1,65 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure full-width sections */
+section {
+  width: 100%;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid #8729ff;
+  outline-offset: 2px;
+}
+
+/* Button hover transitions */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus {
+  border-color: #8729ff !important;
+  box-shadow: 0 0 0 2px rgba(135, 41, 255, 0.2) !important;
+}
+
+/* Card hover effects */
+.agent-card,
+.benefit-card,
+.step-card {
+  will-change: transform, opacity;
+}
+
+/* Animation performance */
+.animate-fade-in-up,
+.animate-fade-in {
+  will-change: transform, opacity;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .glow-purple,
+  .glow-purple-strong {
+    box-shadow: none;
+  }
+}
